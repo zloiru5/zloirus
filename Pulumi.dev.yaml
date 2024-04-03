@@ -1,0 +1,3 @@
+encryptionsalt: v1:N2LYXcoksTI=:v1:WtLjUN0DN5ERR6vH:fQPRfgiNcoTOyZ5NeK1luK7TK1jRQg==
+config:
+  kubernetes:context: minikube
