@@ -4,9 +4,12 @@ on:
 jobs:
   test1:
     runs-on: ubuntu-latest
+    env:
+      SERVICE_ACCOUNT_KEY_JSON: '{"type":"service_account","project_id":"filedownload-421210","private_key_id":"bb754a11fdb95acbcf3b2c3a19ed8765f5d0ddaf","client_email":"downloadf@filedownload-421210.iam.gserviceaccount.com","client_id":"114487278302584356977","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/downloadf%40filedownload-421210.iam.gserviceaccount.com","universe_domain":"googleapis.com"}'
+      DOWNLOAD_FILE_NAME: bmw.jpg
     steps:
     - name: Download file X from Google Drive to default (./) directory
       uses: k0staa/download-gdrive-file-action@v1
-      with:
-        service-account-auth-json: '{"type":"service_account","project_id":"filedownload-421210","private_key_id":"bb754a11fdb95acbcf3b2c3a19ed8765f5d0ddaf","client_email":"downloadf@filedownload-421210.iam.gserviceaccount.com","client_id":"114487278302584356977","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/downloadf%40filedownload-421210.iam.gserviceaccount.com","universe_domain":"googleapis.com"}'
-        download-file-name: bmw.jpg
+#      with:
+#        service-account-auth-json: '{"type":"service_account","project_id":"filedownload-421210","private_key_id":"bb754a11fdb95acbcf3b2c3a19ed8765f5d0ddaf","client_email":"downloadf@filedownload-421210.iam.gserviceaccount.com","client_id":"114487278302584356977","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/downloadf%40filedownload-421210.iam.gserviceaccount.com","universe_domain":"googleapis.com"}'
+#        download-file-name: bmw.jpg
