@@ -3,7 +3,7 @@ on:
   workflow_dispatch
 jobs:
   test1:
-    runs-on: ubunti-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Download file X from Google Drive to default (./) directory
       uses: k0staa/download-gdrive-file-action@v1
